@@ -77,6 +77,7 @@ from .const import (
     PARSED_UPDATE_INTERVAL,
     PARSER_URL_FORMAT,
     PARSER_USER_AGENT,
+    PARSET_SEC_CH_UA,
     PRECIPITATION_AMOUNT,
     ForecastMode,
 )
@@ -240,6 +241,7 @@ class GismeteoApiClient:
         headers = {}
         if method is _GettingMethod.AS_BROWSER:
             headers["User-Agent"] = PARSER_USER_AGENT
+            headers["sec-ch-ua"] = PARSET_SEC_CH_UA
 
         async with self._session.get(url, headers=headers) as resp:
             if resp.status != HTTPStatus.OK:
