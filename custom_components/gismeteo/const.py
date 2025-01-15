@@ -104,6 +104,7 @@ PARSER_USER_AGENT: Final = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
     " Chrome/128.0.0.0 Safari/537.36"
 )
+PARSET_SEC_CH_UA: Final = '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"'
 
 UPDATE_INTERVAL: Final = timedelta(minutes=5)
 PARSED_UPDATE_INTERVAL: Final = timedelta(minutes=61)
